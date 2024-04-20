@@ -3,6 +3,9 @@ import plotly.express as px
 import pandas as pd
 import pydeck as pdk
 import pycountry
+import sys
+sys.path.append("../api/")
+from api_test import get_answer, travelmyth_api 
 
 def plot_weather_data(data, initial_lat, initial_lon):
     fig = st.pydeck_chart(pdk.Deck(
@@ -90,9 +93,10 @@ def show_categories():
     
 
 def user_input():
-    user_option = st.text_input("Enter: ")
-    
-    
+    prompt = st.text_input("Enter: ")
+    prompt = "Hello there"
+    results = get_answer(prompt)
+    print(results)
     st.markdown("<h4 style='text-align: center;'>Add more options for your trip</h4>", unsafe_allow_html=True)
 
     st.markdown("#### Select dates")
