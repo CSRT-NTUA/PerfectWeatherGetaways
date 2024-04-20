@@ -58,6 +58,16 @@ def show_team():
     st.code(code, language='python')
 
 def show_categories():
+    hotel_type = ["Adult Only", "Boutique-Style", "Castle, Family, Haunted, Luxury, Monastery", "Skyscraper", "Small", "Spa", "Vineyard", "Treehouse", "Beachfront", "5 Star", "4 Star", "3 Star", "Cheap", "Historic"]
+    sports = [
+    "Ski", "Ski In Ski Out", "Yoga", "Tennis", "Golf", "Water Park", "Wave Pool", "Pool Lap Lanes",
+    "Pool Swim Up Bar", "Pool Water Slide", "Rooftop Pool", "Lazy River", "Indoor Pool", "Outdoor Pool",
+    "Children's Pool"]
+    pets = ["Dog Friendly", "Dogs Stay Free", "Dog Play Area", "Dog Sitting"]
+    entertainment = ["Honeymoon", "Nightlife", "Romantic", "Unusual", "Panoramic View Pool", "Overwater Bungalows", "Casino"]
+    health_and_safety = ["Health & Safety"]
+    others = ["Parking", "All-Inclusive Packages", "Rooms with Fireplace", "Rooms with Jacuzzi / Hot-Tub",
+        "EV charging stations", "Gym", "Free Wi-Fi", "Business", "Accessible", "Sustainability Journey"]
     categories = [
         "Pool", "Spa", "Beachfront", "Dog Friendly", "Adult Only", "Honeymoon", "Skyscraper", 
         "Infinity Pool", "Luxury", "Historic", "Parking", "Boutique-Style", "Family", "Yoga", 
