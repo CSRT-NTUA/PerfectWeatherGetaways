@@ -75,7 +75,7 @@ def show_team():
         members.append("Konstantinos Kritharidis")
         members.append("Kostas Tziapouras")
         members.append("Nikos Tsalkitzis")
-        members.append("Dimitris Minagias)
+        members.append("Dimitris Minagias")
     """
     st.code(code, language='python')
     st.image('../assets/logo.png', width=300)
