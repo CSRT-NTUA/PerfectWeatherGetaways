@@ -115,8 +115,8 @@ def user_input():
     
     st.markdown("#### Select Weather")
     weather = st.radio('Weather:', ['Sunny','Rainy','Snow'])
-    min_temperature = st.number_input('Enter minimum temperature')
-    max_temperature = st.number_input('Enter maximum temperature')
+    min_temperature = st.number_input('Enter minimum temperature', step=1.00)
+    max_temperature = st.number_input('Enter maximum temperature', step=1.00)
     
     st.markdown("#### Select Activities")
     show_categories()
