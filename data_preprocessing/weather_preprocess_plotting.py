@@ -7,11 +7,9 @@ sys.path.append("../api/")
 from meteo_forecast import get_weather
 
 def mean_implementation(df):
-    date = df["date"]
-    df["date"] = df['date'].apply(extract_day)
+    df['date'] = df['date'].apply(extract_day)
     columns = ["temperature_2m","relative_humidity_2m","rain","snowfall","cloud_cover","wind_speed_10m"]
     df = df.groupby(df['date'])[columns].mean()
-    df['date'] = date
     return df
 
 def extract_day(date_string):
