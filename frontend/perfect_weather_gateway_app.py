@@ -82,16 +82,19 @@ def show_categories():
     selected_others = st.multiselect("Select other options", others)
 
 
-"""def how_it_works():
-    with open("api_test.py", 'r') as file:
-        text = file.read()
-    st.write("This is the api for asking info:")
-    st.code(text, language='python')"""
+def how_it_works():
+    print(1)
+    #with open("api_test.py", 'r') as file:
+    #    text = file.read()
+    #st.write("This is the api for asking info:")
+    #st.code(text, language='python')
     
 
 def user_input():
-    prompt = st.text_input("Enter: ")
-    st.markdown("<h4 style='text-align: center;'>Add more options for your trip</h4>", unsafe_allow_html=True)
+    st.title("Perfect Weather Gateway")
+    
+    prompt = st.text_input("Enter your trip: ")
+    st.markdown("<h4 style='text-align: center;'> Add more options for your trip </h4>", unsafe_allow_html=True)
 
     st.markdown("#### Select dates")
     date_of_arrival = st.date_input('Date of arrival')
@@ -142,8 +145,8 @@ if __name__ == "__main__":
     if st.sidebar.button('User input'):
         st.session_state.screen = "user_input"
         
-    """if st.sidebar.button('How it works?'):
-        st.session_state.screen = "how_it_works" """
+    #if st.sidebar.button('How it works?'):
+    #    st.session_state.screen = "how_it_works"
         
         
     if st.session_state.screen == "welcome_screen":
@@ -152,8 +155,8 @@ if __name__ == "__main__":
         show_results()
     if st.session_state.screen == "user_input":
         user_input()
-    """if st.session_state.screen == "how_it_works":
-        how_it_works() """
+    #if st.session_state.screen == "how_it_works":
+    #    how_it_works()
     
     #data = pd.read_csv("../api/data.csv")
     #fig = plot_weather_data(data, )
