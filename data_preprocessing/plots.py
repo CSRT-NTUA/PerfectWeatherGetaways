@@ -23,7 +23,7 @@ def histogram_plot(data):
     column_options = {
         'temperature_2m': 'Temperature 🌡️',
         'relative_humidity_2m': 'Humidity 💧',
-        'rain,snowfall': 'Rain ☔️',
+        'rain': 'Rain ☔️',
         'snowfall': 'Snow ❄️',
         'cloud_cover': 'Clouds ☁️',
         'wind_speed_10m': 'Winds 💨'
@@ -33,15 +33,14 @@ def histogram_plot(data):
     selected_column = st.selectbox('Select a column', options=list(column_options.keys()), format_func=lambda x: column_options[x])
 
     # Plot histogram
-    plt.figure(figsize=(8, 6))
-    sns.histplot(data[selected_column], kde=True)
-    plt.title(f'Histogram of {selected_column}')
+    plt.figure(figsize=(20, 15))
+    sns.barplot(data, x="date", y=selected_column, hue=selected_column)
+    plt.title(f'Barplot of {selected_column}')
     plt.xlabel(selected_column)
-    plt.ylabel('Frequency')
+    plt.ylabel(f'{selected_column}')
     st.pyplot(fig=None)
 
-if __name__ == '__main__':
-    st.set_option('deprecation.showPyplotGlobalUse', False)
-    main()
-    data = load_data()
+#if __name__ == '__main__':
+#    st.set_option('deprecation.showPyplotGlobalUse', False)
+#    data = load_data()
    

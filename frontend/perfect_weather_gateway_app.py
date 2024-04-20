@@ -48,6 +48,9 @@ def plot_weather_data(data, initial_lat, initial_lon):
     ))
     return fig
 
+
+if 'best_csv' not in st.session_state:
+    st.session_state.best_csv = pd.DataFrame()
 if 'screen' not in st.session_state:
     st.session_state.screen = "welcome_screen"
 if 'recommented_url' not in st.session_state:
@@ -213,6 +216,7 @@ def user_input():
                     """
                     )
             st.session_state.recommented_url = url[top_recommendation]
+            st.session_state.best_csv = best_csv[top_recommendation]
             st.success('Done')
         
 if __name__ == "__main__":
@@ -239,7 +243,10 @@ if __name__ == "__main__":
         # histogram_plot(best_recommended_csv)
     #if st.session_state.screen == "how_it_works":
     #    how_it_works()
-    
+    if(st.session_state.best_csv.empty):
+        pass
+    else:
+        histogram_plot(st.session_state.best_csv)
     #data = pd.read_csv("../api/data.csv")
     #fig = plot_weather_data(data, )
     #print(st.session_state.screen)
