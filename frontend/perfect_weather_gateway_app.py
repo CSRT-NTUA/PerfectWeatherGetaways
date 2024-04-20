@@ -68,22 +68,16 @@ def show_categories():
     "Children's Pool"]
     pets = ["Dog Friendly", "Dogs Stay Free", "Dog Play Area", "Dog Sitting"]
     entertainment = ["Honeymoon", "Nightlife", "Romantic", "Unusual", "Panoramic View Pool", "Overwater Bungalows", "Casino"]
-    health_and_safety = ["Health & Safety"]
+    #health_and_safety = ["Health & Safety"]
     others = ["Parking", "All-Inclusive Packages", "Rooms with Fireplace", "Rooms with Jacuzzi / Hot-Tub",
         "EV charging stations", "Gym", "Free Wi-Fi", "Business", "Accessible", "Sustainability Journey"]
-    categories = [
-        "Pool", "Spa", "Beachfront", "Dog Friendly", "Adult Only", "Honeymoon", "Skyscraper", 
-        "Infinity Pool", "Luxury", "Historic", "Parking", "Boutique-Style", "Family", "Yoga", 
-        "Ski In Ski Out", "Unusual", "Castle", "Cheap", "Overwater Bungalows", "Ski", "Vineyard", 
-        "Monastery", "Small", "Romantic", "Nightlife", "5 Star", "4 Star", "3 Star", "Haunted", 
-        "Pool Lap Lanes", "Pool Swim Up Bar", "Pool Water Slide", "Panoramic View Pool", "Rooftop Pool", 
-        "Water Park", "Wave Pool", "Lazy River", "Private Pool", "Heated Pool", "Indoor Pool", "Outdoor Pool", 
-        "Children's Pool", "Dogs Stay Free", "Dog Play Area", "Dog Sitting", "Rooms with Fireplace", 
-        "All-Inclusive Packages", "Rooms with Jacuzzi / Hot-Tub", "Health & Safety", "EV charging stations", 
-        "Gym", "Free Wi-Fi", "Business", "Treehouse", "Tennis", "Beach", "Accessible", "Casino", 
-        "Sustainability Journey", "Golf"
-    ]
-    selected_categories = st.multiselect("Select Activities", categories)
+    selected_hotel_types = st.multiselect("Select Hotel Type", hotel_type)
+    selected_sports = st.multiselect("Select Sports", sports)
+    selected_pets = st.multiselect("Select Pets", pets)
+    selected_entertainment = st.multiselect("Select Entertainment", entertainment)
+    selected_health_and_safety = st.checkbox("Select Health & safety")
+    selected_others = st.multiselect("Select other options", others)
+
 
 """def how_it_works():
     with open("api_test.py", 'r') as file:
