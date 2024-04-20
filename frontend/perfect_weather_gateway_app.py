@@ -69,12 +69,17 @@ def show_team():
     
     code = """
     def hello():
-        print("Hello, from CSRT Team!")
-
-    hello()
+        print("Hello, we are the CSRT-NTUA Team!")
+        members = []
+        members.append("Spiros Maggioros")
+        members.append("Konstantinos Kritharidis")
+        members.append("Kostas Tziapouras")
+        members.append("Nikos Tsalkitzis")
+        members.append("Dimitris Minagias)
     """
-
     st.code(code, language='python')
+    st.image('../assets/logo.png', width=300)
+
 
 def typewriter(text: str, speed: int):
     tokens = text.split()
