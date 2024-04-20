@@ -1,0 +1,12 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+df = pd.read_csv('data.csv')
+print(df.columns)
+print(df.isnull().sum())#checking if dataset has null values
+def meteo_temperature_print(df, column):
+    plt.plot(df['date'], df['temperature_2m'])
+    plt.xlabel('Date')
+    plt.ylabel('Temperature')
+    plt.title("Date VS Temeprature")
+    plt.show()
+meteo_temperature_print(df, None)    

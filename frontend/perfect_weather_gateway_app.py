@@ -1,0 +1,124 @@
+import streamlit as st
+import plotly.express as px
+import pandas as pd
+import pydeck as pdk
+import pycountry
+
+def plot_weather_data(data, initial_lat, initial_lon):
+    fig = st.pydeck_chart(pdk.Deck(
+    map_style=None,
+    initial_view_state=pdk.ViewState(
+        latitude=initial_lat,
+        longitude=initial_lon,
+        zoom=11,
+        pitch=50,
+    ),
+    layers=[
+        pdk.Layer(
+           'HexagonLayer',
+           data=data,
+           get_position='[lon, lat]',
+           radius=200,
+           elevation_scale=4,
+           elevation_range=[0, 1000],
+           pickable=True,
+           extruded=True,
+        ),
+        pdk.Layer(
+            'ScatterplotLayer',
+            data=data,
+            get_position='[lon, lat]',
+            get_color='[200, 30, 0, 160]',
+            get_radius=200,
+        ),
+    ],
+    ))
+    return fig
+
+if 'screen' not in st.session_state:
+    st.session_state.screen = "welcome_screen"
+def get_flag_url(country_code):
+    return f"https://flagcdn.com/32x24/{country_code.lower()}.png"
+
+def show_results():
+    st.header("Our results")
+    st.components.v1.iframe("https://www.travelmyth.com/" , width=800, height=2600)
+    
+
+def show_team():
+    st.header("CSRT Team")
+    
+    code = """
+    def hello():
+        print("Hello, from CSRT Team!")
+
+    hello()
+    """
+
+    st.code(code, language='python')
+
+def show_categories():
+    text_file = open('categories.txt', 'r')
+    html_string = text_file.read()
+    st.markdown(html_string, unsafe_allow_html=True)
+
+"""def how_it_works():
+    with open("api_test.py", 'r') as file:
+        text = file.read()
+    st.write("This is the api for asking info:")
+    st.code(text, language='python')"""
+    
+
+def user_input():
+    user_option = st.text_input("Enter: ")
+    
+    show_categories()
+    
+    st.markdown("<h4 style='text-align: center;'>Add more options for your trip</h4>", unsafe_allow_html=True)
+    date_of_arrival = st.date_input('Date of arrival')
+    date_of_deperature = st.date_input('Date of departure')
+    
+    st.radio('Weather:', ['sunny','rainy'])
+    st.write('Weather')
+    
+    st.multiselect('Activities', ['Beach','Ski','City Break','Surf'])
+   
+    weather = st.checkbox('Sunny')
+    weather2 = st.checkbox('Rainy')
+    
+    
+
+if __name__ == "__main__":
+    
+    st.sidebar.header("Menu")
+    st.sidebar.write("")
+
+        
+
+    if st.sidebar.button('Show results'):
+        st.session_state.screen = "result"
+    
+    if st.sidebar.button('Team'):
+        st.session_state.screen = "welcome_screen"
+    if st.sidebar.button('User input'):
+        st.session_state.screen = "user_input"
+        
+    """if st.sidebar.button('How it works?'):
+        st.session_state.screen = "how_it_works" """
+        
+        
+    if st.session_state.screen == "welcome_screen":
+        show_team()
+    if st.session_state.screen == "result":
+        show_results()
+    if st.session_state.screen == "user_input":
+        user_input()
+    """if st.session_state.screen == "how_it_works":
+        how_it_works() """
+    
+    #data = pd.read_csv("../api/data.csv")
+    #fig = plot_weather_data(data, )
+    #print(st.session_state.screen)
+    
+  
+ 

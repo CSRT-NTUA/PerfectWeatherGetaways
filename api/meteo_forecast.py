@@ -13,9 +13,9 @@ def get_weather(lon, lat, hourly, forecast_days = 14):
     # The order of variables in hourly or daily is important to assign them correctly below
     url = "https://api.open-meteo.com/v1/forecast"
     params = {
-        "latitude": 52.52,
-        "longitude": 13.41,
-        "hourly": ["temperature_2m", "relative_humidity_2m", "rain", "snowfall", "cloud_cover", "wind_speed_10m"],
+        "latitude": lon,
+        "longitude": lat,
+        "hourly": hourly,
         "forecast_days": 14
     }
     responses = openmeteo.weather_api(url, params=params)
@@ -48,11 +48,12 @@ def get_weather(lon, lat, hourly, forecast_days = 14):
     hourly_data["snowfall"] = hourly_snowfall
     hourly_data["cloud_cover"] = hourly_cloud_cover
     hourly_data["wind_speed_10m"] = hourly_wind_speed_10m
-
     hourly_dataframe = pd.DataFrame(data = hourly_data)
+
     return hourly_dataframe
 
 
-if __name__ == "__main__":
-    df = get_weather(52.52, 13.41, ["temperature_2m", "rain", "snowfall", "wind_speed_10m", ])
-    df.to_csv("data.csv", sep=',', index=False)
+#if __name__ == "__main__":
+#    df = get_weather(52.52, 13.41, ["temperature_2m", "rain", "snowfall", "wind_speed_10m", ])
+#    df.to_csv("data.csv", sep=',', index=False)
+

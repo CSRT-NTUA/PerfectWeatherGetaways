@@ -1,0 +1,191 @@
+<div id="filter_categories_mobile" class="collections_slider show_mobile_boxes">
+                      
+                      <div class="region_box_outer collections_buttons number-of-results-2" id="pool_collection" type="Collection">
+                      <span class="icon-pool_collection icons green-bar-icons"></span>&nbsp;<span class="green_box_title" title="Πισίνα">Πισίνα</span>
+                      </div>
+                      <div class="region_box_outer collections_buttons number-of-results-2" id="spa_collection" type="Collection">
+                      <span class="icon-spa_collection icons green-bar-icons"></span>&nbsp;<span class="green_box_title" title="Σπα">Σπα</span>
+                      </div>
+                      <div class="region_box_outer collections_buttons number-of-results-2" id="beachfront_collection" type="Collection">
+                      <span class="icon-beachfront_collection icons green-bar-icons"></span>&nbsp;<span class="green_box_title" title="Παραλιακό">Παραλιακό</span>
+                      </div>
+                      <div class="region_box_outer collections_buttons number-of-results-2" id="dog_friendly_collection" type="Collection">
+                      <span class="icon-dog_friendly_collection icons green-bar-icons"></span>&nbsp;<span class="green_box_title" title="Δέχεται Σκύλους">Δέχεται Σκύλους</span>
+                      </div>
+                      <div class="region_box_outer collections_buttons number-of-results-2" id="adult_only_collection" type="Collection">
+                      <span class="icon-adult_only_collection icons green-bar-icons"></span>&nbsp;<span class="green_box_title" title="Ενήλικες Μόνο">Ενήλικες Μόνο</span>
+                      </div>
+                      <div class="region_box_outer collections_buttons number-of-results-2" id="honeymoon_collection" type="Collection">
+                      <span class="icon-honeymoon_collection icons green-bar-icons"></span>&nbsp;<span class="green_box_title" title="Για Νιόπαντρους">Για Νιόπαντρους</span>
+                      </div>
+                      <div class="region_box_outer collections_buttons number-of-results-2" id="skyscraper_collection" type="Collection">
+                      <span class="icon-skyscraper_collection icons green-bar-icons"></span>&nbsp;<span class="green_box_title" title="Ουρανοξύστης">Ουρανοξύστης</span>
+                      </div>
+                      <div class="region_box_outer collections_buttons number-of-results-2" id="infinity_pool_collection" type="Collection">
+                      <span class="icon-infinity_pool_collection icons green-bar-icons"></span>&nbsp;<span class="green_box_title" title="Πισίνα Infinity">Πισίνα Infinity</span>
+                      </div>
+                      <div class="region_box_outer collections_buttons number-of-results-2" id="luxury_collection" type="Collection">
+                      <span class="icon-luxury_collection icons green-bar-icons"></span>&nbsp;<span class="green_box_title" title="Πολυτελές">Πολυτελές</span>
+                      </div>
+                      <div class="region_box_outer collections_buttons number-of-results-2" id="historic_collection" type="Collection">
+                      <span class="icon-historic_collection icons green-bar-icons"></span>&nbsp;<span class="green_box_title" title="Ιστορικό">Ιστορικό</span>
+                      </div>
+                      <div class="region_box_outer collections_buttons number-of-results-2" id="parking_collection" type="Collection">
+                      <span class="icon-parking_collection icons green-bar-icons"></span>&nbsp;<span class="green_box_title" title="Πάρκινγκ">Πάρκινγκ</span>
+                      </div>
+                      <div class="region_box_outer collections_buttons number-of-results-2" id="boutique_collection" type="Collection">
+                      <span class="icon-boutique_collection icons green-bar-icons"></span>&nbsp;<span class="green_box_title" title="Μπουτίκ-Στυλ">Μπουτίκ-Στυλ</span>
+                      </div>
+                      <div class="region_box_outer collections_buttons number-of-results-2" id="family_collection" type="Collection">
+                      <span class="icon-family_collection icons green-bar-icons"></span>&nbsp;<span class="green_box_title" title="Για Οικογένειες">Για Οικογένειες</span>
+                      </div>
+                      <div class="region_box_outer collections_buttons number-of-results-2" id="yoga_collection" type="Collection">
+                      <span class="icon-yoga_collection icons green-bar-icons"></span>&nbsp;<span class="green_box_title" title="Γιόγκα">Γιόγκα</span>
+                      </div>
+                      <div class="region_box_outer collections_buttons number-of-results-2" id="ski_in_ski_out_collection" type="Collection">
+                      <span class="icon-ski_in_ski_out_collection icons green-bar-icons"></span>&nbsp;<span class="green_box_title" title="Δίπλα σε Σκι Λιφτ">Δίπλα σε Σκι Λιφτ</span>
+                      </div>
+                      <div class="region_box_outer collections_buttons number-of-results-2" id="unusual_collection" type="Collection">
+                      <span class="icon-unusual_collection icons green-bar-icons"></span>&nbsp;<span class="green_box_title" title="Ασυνήθιστο">Ασυνήθιστο</span>
+                      </div>
+                      <div class="region_box_outer collections_buttons number-of-results-2" id="castle_collection" type="Collection">
+                      <span class="icon-castle_collection icons green-bar-icons"></span>&nbsp;<span class="green_box_title" title="Κάστρο">Κάστρο</span>
+                      </div>
+                      <div class="region_box_outer collections_buttons number-of-results-2" id="cheap_collection" type="Collection">
+                      <span class="icon-cheap_collection icons green-bar-icons"></span>&nbsp;<span class="green_box_title" title="Φθηνό">Φθηνό</span>
+                      </div>
+                      <div class="region_box_outer collections_buttons number-of-results-2" id="overwater_bungalows_collection" type="Collection">
+                      <span class="icon-overwater_bungalows_collection icons green-bar-icons"></span>&nbsp;<span class="green_box_title" title="Over Water Bungalows">Over Water Bungalows</span>
+                      </div>
+                      <div class="region_box_outer collections_buttons number-of-results-2" id="ski_collection" type="Collection">
+                      <span class="icon-ski_collection icons green-bar-icons"></span>&nbsp;<span class="green_box_title" title="Σκι">Σκι</span>
+                      </div>
+                      <div class="region_box_outer collections_buttons number-of-results-2" id="vineyard_collection" type="Collection">
+                      <span class="icon-vineyard_collection icons green-bar-icons"></span>&nbsp;<span class="green_box_title" title="Αμπελώνας">Αμπελώνας</span>
+                      </div>
+                      <div class="region_box_outer collections_buttons number-of-results-2" id="monastery_collection" type="Collection">
+                      <span class="icon-monastery_collection icons green-bar-icons"></span>&nbsp;<span class="green_box_title" title="Μοναστήρι">Μοναστήρι</span>
+                      </div>
+                      <div class="region_box_outer collections_buttons number-of-results-2" id="small_collection" type="Collection">
+                      <span class="icon-small_collection icons green-bar-icons"></span>&nbsp;<span class="green_box_title" title="Μικρό">Μικρό</span>
+                      </div>
+                      <div class="region_box_outer collections_buttons number-of-results-2" id="romantic_collection" type="Collection">
+                      <span class="icon-romantic_collection icons green-bar-icons"></span>&nbsp;<span class="green_box_title" title="Ρομαντικό">Ρομαντικό</span>
+                      </div>
+                      <div class="region_box_outer collections_buttons number-of-results-2" id="nightlife_collection" type="Collection">
+                      <span class="icon-nightlife_collection icons green-bar-icons"></span>&nbsp;<span class="green_box_title" title="Νυχτερινή Ζωή">Νυχτερινή Ζωή</span>
+                      </div>
+                      <div class="region_box_outer collections_buttons number-of-results-2" id="five_star_collection" type="Collection">
+                      <span class="icon-five_star_collection icons green-bar-icons"></span>&nbsp;<span class="green_box_title" title="5 αστέρων">5 αστέρων</span>
+                      </div>
+                      <div class="region_box_outer collections_buttons number-of-results-2" id="four_star_collection" type="Collection">
+                      <span class="icon-four_star_collection icons green-bar-icons"></span>&nbsp;<span class="green_box_title" title="4 αστέρων">4 αστέρων</span>
+                      </div>
+                      <div class="region_box_outer collections_buttons number-of-results-2" id="three_star_collection" type="Collection">
+                      <span class="icon-three_star_collection icons green-bar-icons"></span>&nbsp;<span class="green_box_title" title="3 αστέρων">3 αστέρων</span>
+                      </div>
+                      <div class="region_box_outer collections_buttons number-of-results-2" id="haunted_collection" type="Collection">
+                      <span class="icon-haunted_collection icons green-bar-icons"></span>&nbsp;<span class="green_box_title" title="Στοιχειωμένο">Στοιχειωμένο</span>
+                      </div>
+                      <div class="region_box_outer collections_buttons number-of-results-2" id="pool_lap_lanes_collection" type="Collection">
+                      <span class="icon-pool_lap_lanes_collection icons green-bar-icons"></span>&nbsp;<span class="green_box_title" title="Πισίνα με Διαδρομές">Πισίνα με Διαδρομές</span>
+                      </div>
+                      <div class="region_box_outer collections_buttons number-of-results-2" id="pool_swim_up_bar_collection" type="Collection">
+                      <span class="icon-pool_swim_up_bar_collection icons green-bar-icons"></span>&nbsp;<span class="green_box_title" title="Πισίνα με Swim Up Bar">Πισίνα με Swim Up Bar</span>
+                      </div>
+                      <div class="region_box_outer collections_buttons number-of-results-2" id="pool_water_slide_collection" type="Collection">
+                      <span class="icon-pool_water_slide_collection icons green-bar-icons"></span>&nbsp;<span class="green_box_title" title="Πισίνα με Νεροτσουλήθρα">Πισίνα με Νεροτσουλήθρα</span>
+                      </div>
+                      <div class="region_box_outer collections_buttons number-of-results-2" id="panoramic_view_pool_collection" type="Collection">
+                      <span class="icon-panoramic_view_pool_collection icons green-bar-icons"></span>&nbsp;<span class="green_box_title" title="Πισίνα με Πανοραμική Θέα">Πισίνα με Πανοραμική Θέα</span>
+                      </div>
+                      <div class="region_box_outer collections_buttons number-of-results-2" id="rooftop_pool_collection" type="Collection">
+                      <span class="icon-rooftop_pool_collection icons green-bar-icons"></span>&nbsp;<span class="green_box_title" title="Rooftop Πισίνα">Rooftop Πισίνα</span>
+                      </div>
+                      <div class="region_box_outer collections_buttons number-of-results-2" id="water_park_collection" type="Collection">
+                      <span class="icon-water_park_collection icons green-bar-icons"></span>&nbsp;<span class="green_box_title" title="Water Park">Water Park</span>
+                      </div>
+                      <div class="region_box_outer collections_buttons number-of-results-2" id="wave_pool_collection" type="Collection">
+                      <span class="icon-wave_pool_collection icons green-bar-icons"></span>&nbsp;<span class="green_box_title" title="Πισίνα με Τεχνητά Κύματα">Πισίνα με Τεχνητά Κύματα</span>
+                      </div>
+                      <div class="region_box_outer collections_buttons number-of-results-2" id="lazy_river_collection" type="Collection">
+                      <span class="icon-lazy_river_collection icons green-bar-icons"></span>&nbsp;<span class="green_box_title" title="Lazy River">Lazy River</span>
+                      </div>
+                      <div class="region_box_outer collections_buttons number-of-results-2" id="private_pool_collection" type="Collection">
+                      <span class="icon-private_pool_collection icons green-bar-icons"></span>&nbsp;<span class="green_box_title" title="Δωμάτια με Ιδιωτική Πισίνα">Δωμάτια με Ιδιωτική Πισίνα</span>
+                      </div>
+                      <div class="region_box_outer collections_buttons number-of-results-2" id="heated_pool_collection" type="Collection">
+                      <span class="icon-heated_pool_collection icons green-bar-icons"></span>&nbsp;<span class="green_box_title" title="Θερμαινόμενη Πισίνα">Θερμαινόμενη Πισίνα</span>
+                      </div>
+                      <div class="region_box_outer collections_buttons number-of-results-2" id="indoor_pool_collection" type="Collection">
+                      <span class="icon-indoor_pool_collection icons green-bar-icons"></span>&nbsp;<span class="green_box_title" title="Εσωτερική Πισίνα">Εσωτερική Πισίνα</span>
+                      </div>
+                      <div class="region_box_outer collections_buttons number-of-results-2" id="outdoor_pool_collection" type="Collection">
+                      <span class="icon-outdoor_pool_collection icons green-bar-icons"></span>&nbsp;<span class="green_box_title" title="Εξωτερική Πισίνα">Εξωτερική Πισίνα</span>
+                      </div>
+                      <div class="region_box_outer collections_buttons number-of-results-2" id="children_pool_collection" type="Collection">
+                      <span class="icon-children_pool_collection icons green-bar-icons"></span>&nbsp;<span class="green_box_title" title="Πισίνα για Παιδιά">Πισίνα για Παιδιά</span>
+                      </div>
+                      <div class="region_box_outer collections_buttons number-of-results-2" id="dogs_stay_free_collection" type="Collection">
+                      <span class="icon-dogs_stay_free_collection icons green-bar-icons"></span>&nbsp;<span class="green_box_title" title="Δωρεάν Διαμονή για Σκύλους">Δωρεάν Διαμονή για Σκύλους</span>
+                      </div>
+                      <div class="region_box_outer collections_buttons number-of-results-2" id="dog_play_area_collection" type="Collection">
+                      <span class="icon-dog_play_area_collection icons green-bar-icons"></span>&nbsp;<span class="green_box_title" title="Χώρος Παιχνιδιού για Σκύλους">Χώρος Παιχνιδιού για Σκύλους</span>
+                      </div>
+                      <div class="region_box_outer collections_buttons number-of-results-2" id="dog_sitting_collection" type="Collection">
+                      <span class="icon-dog_sitting_collection icons green-bar-icons"></span>&nbsp;<span class="green_box_title" title="Υπηρεσία Φύλαξης Σκύλων">Υπηρεσία Φύλαξης Σκύλων</span>
+                      </div>
+                      <div class="region_box_outer collections_buttons number-of-results-2" id="fireplace_collection" type="Collection">
+                      <span class="icon-fireplace_collection icons green-bar-icons"></span>&nbsp;<span class="green_box_title" title="Δωμάτια με τζάκι">Δωμάτια με τζάκι</span>
+                      </div>
+                      <div class="region_box_outer collections_buttons number-of-results-2" id="all_inclusive_collection" type="Collection">
+                      <span class="icon-all_inclusive_collection icons green-bar-icons"></span>&nbsp;<span class="green_box_title" title="Πακέτα all-inclusive">Πακέτα all-inclusive</span>
+                      </div>
+                      <div class="region_box_outer collections_buttons number-of-results-2" id="jacuzzi_hot_tub_collection" type="Collection">
+                      <span class="icon-jacuzzi_hot_tub_collection icons green-bar-icons"></span>&nbsp;<span class="green_box_title" title="Δωμάτια με τζακούζι">Δωμάτια με τζακούζι</span>
+                      </div>
+                      <div class="region_box_outer collections_buttons number-of-results-2" id="health_and_safety_collection" type="Collection">
+                      <span class="icon-health_and_safety_collection icons green-bar-icons"></span>&nbsp;<span class="green_box_title" title="Υγιεινή & Ασφάλεια">Υγιεινή & Ασφάλεια</span>
+                      </div>
+                      <div class="region_box_outer collections_buttons number-of-results-2" id="ev_charging_collection" type="Collection">
+                      <span class="icon-ev_charging_collection icons green-bar-icons"></span>&nbsp;<span class="green_box_title" title="Φόρτιση ηλεκτρικών αυτοκινήτων">Φόρτιση ηλεκτρικών αυτοκινήτων</span>
+                      </div>
+                      <div class="region_box_outer collections_buttons number-of-results-2" id="gym_collection" type="Collection">
+                      <span class="icon-gym_collection icons green-bar-icons"></span>&nbsp;<span class="green_box_title" title="Γυμναστήριο">Γυμναστήριο</span>
+                      </div>
+                      <div class="region_box_outer collections_buttons number-of-results-2" id="free_wifi_collection" type="Collection">
+                      <span class="icon-free_wifi_collection icons green-bar-icons"></span>&nbsp;<span class="green_box_title" title="Δωρεάν WiFi">Δωρεάν WiFi</span>
+                      </div>
+                      <div class="region_box_outer collections_buttons number-of-results-2" id="business_collection" type="Collection">
+                      <span class="icon-business_collection icons green-bar-icons"></span>&nbsp;<span class="green_box_title" title="Business">Business</span>
+                      </div>
+                      <div class="region_box_outer collections_buttons number-of-results-2" id="treehouse_collection" type="Collection">
+                      <span class="icon-treehouse_collection icons green-bar-icons"></span>&nbsp;<span class="green_box_title" title="Δεντρόσπιτο">Δεντρόσπιτο</span>
+                      </div>
+                      <div class="region_box_outer collections_buttons number-of-results-2" id="tennis_collection" type="Collection">
+                      <span class="icon-tennis_collection icons green-bar-icons"></span>&nbsp;<span class="green_box_title" title="Τένις">Τένις</span>
+                      </div>
+                      <div class="region_box_outer collections_buttons number-of-results-2" id="beach_collection" type="Collection">
+                      <span class="icon-beach_collection icons green-bar-icons"></span>&nbsp;<span class="green_box_title" title="Κοντά σε Παραλία">Κοντά σε Παραλία</span>
+                      </div>
+                      <div class="region_box_outer collections_buttons number-of-results-2" id="accessible_collection" type="Collection">
+                      <span class="icon-accessible_collection icons green-bar-icons"></span>&nbsp;<span class="green_box_title" title="Πρόσβαση ΑΜΕΑ">Πρόσβαση ΑΜΕΑ</span>
+                      </div>
+                      <div class="region_box_outer collections_buttons number-of-results-2" id="casino_collection" type="Collection">
+                      <span class="icon-casino_collection icons green-bar-icons"></span>&nbsp;<span class="green_box_title" title="Καζίνο">Καζίνο</span>
+                      </div>
+                      <div class="region_box_outer collections_buttons number-of-results-2" id="eco_friendly_collection" type="Collection">
+                      <span class="icon-eco_friendly_collection icons green-bar-icons"></span>&nbsp;<span class="green_box_title" title="Πρακτικές Bιωσιμότητας">Πρακτικές Bιωσιμότητας</span>
+                      </div>
+                      <div class="region_box_outer collections_buttons number-of-results-2" id="golf_collection" type="Collection">
+                      <span class="icon-golf_collection icons green-bar-icons"></span>&nbsp;<span class="green_box_title" title="Γκολφ">Γκολφ</span>
+                      </div>                    </div>
+                    <div id="scrollCollectionsLeft"><svg viewBox="0 0 24 24" focusable="false" style="transform:scaleX(-1);">
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M8.59,16.59L13.17,12L8.59,7.41L10,6l6,6l-6,6L8.59,16.59z"></path>
+                      </svg></div>
+                    <div id="scrollCollectionsRight"><svg viewBox="0 0 24 24" focusable="false">
+                        <path d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M8.59,16.59L13.17,12L8.59,7.41L10,6l6,6l-6,6L8.59,16.59z"></path>
+                      </svg></div>
+                  </div>
