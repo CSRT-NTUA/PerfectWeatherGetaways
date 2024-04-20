@@ -82,19 +82,28 @@ def show_categories():
 def user_input():
     user_option = st.text_input("Enter: ")
     
-    show_categories()
     
     st.markdown("<h4 style='text-align: center;'>Add more options for your trip</h4>", unsafe_allow_html=True)
+
+    st.markdown("#### Select dates")
     date_of_arrival = st.date_input('Date of arrival')
     date_of_deperature = st.date_input('Date of departure')
     
-    st.radio('Weather:', ['sunny','rainy'])
-    st.write('Weather')
+    st.markdown("#### Select Country")
+    countries = [(country.name, country.alpha_2) for country in pycountry.countries]
+    selected_country = st.selectbox("Select a country", countries, format_func=lambda x: x[0])
+    flag_url = get_flag_url(selected_country[1])
+    st.image(flag_url, width=32)
     
-    st.multiselect('Activities', ['Beach','Ski','City Break','Surf'])
-   
-    weather = st.checkbox('Sunny')
-    weather2 = st.checkbox('Rainy')
+    st.markdown("#### Select Country")
+    st.radio('Weather:', ['Sunny','Rainy'])
+    
+    st.markdown("#### Select Activities")
+    show_categories()
+    
+
+    st.button('Search')
+    
     
     
 
@@ -129,6 +138,3 @@ if __name__ == "__main__":
     #data = pd.read_csv("../api/data.csv")
     #fig = plot_weather_data(data, )
     #print(st.session_state.screen)
-    
-  
- 
