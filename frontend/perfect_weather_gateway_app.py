@@ -5,7 +5,7 @@ import pydeck as pdk
 import pycountry
 import sys
 sys.path.append("../api/")
-from api import get_answer, travelmyth_api
+from api_test import get_answer, travelmyth_api
 
 def plot_weather_data(data, initial_lat, initial_lon):
     fig = st.pydeck_chart(pdk.Deck(
