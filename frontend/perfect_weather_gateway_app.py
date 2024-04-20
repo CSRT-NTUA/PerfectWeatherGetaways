@@ -92,6 +92,8 @@ def how_it_works():
 
 def user_input():
     st.title("Perfect Weather Gateway")
+    st.image('../assets/images/travelsmyth_logo.png')
+    
     
     prompt = st.text_input("Enter your trip: ")
     st.markdown("<h4 style='text-align: center;'> Add more options for your trip </h4>", unsafe_allow_html=True)
