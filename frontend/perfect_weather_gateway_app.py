@@ -13,9 +13,10 @@ from meteo_forecast import get_weather
 from weather_preprocess_plotting import mean_implementation
 from map_plot import create_map
 import time
-
-
+import plotly.graph_objects as go
 st.set_option('deprecation.showPyplotGlobalUse', False)
+
+
 def plot_weather_data(data, initial_lat, initial_lon):
     fig = st.pydeck_chart(pdk.Deck(
     map_style=None,
@@ -49,12 +50,15 @@ def plot_weather_data(data, initial_lat, initial_lon):
 
 if 'screen' not in st.session_state:
     st.session_state.screen = "welcome_screen"
+if 'recommented_url' not in st.session_state:
+    st.session_state.recommented_url = "https://www.travelmyth.com"
 def get_flag_url(country_code):
     return f"https://flagcdn.com/32x24/{country_code.lower()}.png"
 
 def show_results():
     st.header("Our results")
-    st.components.v1.iframe("https://www.travelmyth.com/" , width=800, height=2600)
+    print(st.session_state.recommented_url)
+    st.components.v1.iframe(st.session_state.recommented_url , width=800, height=2600)
     
 
 def show_team():
@@ -193,6 +197,7 @@ def user_input():
                 # youre ready to do the classification
                 # user inputs are [weather, min_temp, max_temp, date_of_arrival, date_of_departure, selected_country]
                 scores[x['name']] = assign_score(current_csv, weather, min_temperature, max_temperature, date_of_arrival, date_of_deperature)
+                x['url'] += f"&checkin_day={date_of_arrival.day}&checkin_month={date_of_arrival.month}&checkin_year={date_of_arrival.year}&checkout_day={date_of_deperature.day}&checkout_month={date_of_deperature.month}&checkout_year={date_of_deperature.year}"
                 url[x['name']] = x['url']
                 best_csv[x['name']] = current_csv
             #st.write(weathers)
@@ -207,10 +212,8 @@ def user_input():
                     - {index + 1}'s Recommendation is: {x} | [Link]({url[x]})
                     """
                     )
+            st.session_state.recommented_url = url[top_recommendation]
             st.success('Done')
-            
-            st.write("### Temperature predictions")
-            return best_csv[top_recommendation]
         
 if __name__ == "__main__":
     st.sidebar.header("Menu")
