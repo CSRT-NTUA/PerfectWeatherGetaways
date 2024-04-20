@@ -49,7 +49,7 @@ def get_weather(lon, lat, hourly, forecast_days = 14):
     hourly_data["cloud_cover"] = hourly_cloud_cover
     hourly_data["wind_speed_10m"] = hourly_wind_speed_10m
     hourly_dataframe = pd.DataFrame(data = hourly_data)
-
+    # hourly_dataframe.to_csv("data.csv", sep=',', index=False)
     return hourly_dataframe
 
 
