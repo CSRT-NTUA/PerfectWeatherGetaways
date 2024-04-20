@@ -3,7 +3,9 @@
 import requests
 import openai
 import json 
+import os
 
+openai.api_key = "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"
 def get_answer(prompt:str):
   # response 
   response = openai.ChatCompletion.create(
