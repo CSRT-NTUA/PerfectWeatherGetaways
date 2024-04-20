@@ -179,10 +179,8 @@ def user_input():
         for (index, x) in enumerate(scores):
             container.write(f"{index + 1}'st Recomendation : {x}")
         create_map(points[0][0], points[0][1], points)
-
-    
+        
 if __name__ == "__main__":
-    
     st.sidebar.header("Menu")
     st.sidebar.write("")
     if st.sidebar.button('Show results'):
