@@ -126,7 +126,7 @@ def user_input():
             current_csv = get_weather(x['latitude'], x['longitude'])
             current_csv = mean_implementation(current_csv)
             st.write(current_csv)
-            # youre ready to do the classification
+            # youre ready to do the classification, user inputs are [weather, min_temp, max_temp, date_of_arrival, date_of_departure, selected_country]
         st.write(weathers)
         st.write(results)
     
