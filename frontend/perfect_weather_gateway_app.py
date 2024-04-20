@@ -58,9 +58,19 @@ def show_team():
     st.code(code, language='python')
 
 def show_categories():
-    text_file = open('categories.txt', 'r')
-    html_string = text_file.read()
-    st.markdown(html_string, unsafe_allow_html=True)
+    categories = [
+        "Pool", "Spa", "Beachfront", "Dog Friendly", "Adult Only", "Honeymoon", "Skyscraper", 
+        "Infinity Pool", "Luxury", "Historic", "Parking", "Boutique-Style", "Family", "Yoga", 
+        "Ski In Ski Out", "Unusual", "Castle", "Cheap", "Overwater Bungalows", "Ski", "Vineyard", 
+        "Monastery", "Small", "Romantic", "Nightlife", "5 Star", "4 Star", "3 Star", "Haunted", 
+        "Pool Lap Lanes", "Pool Swim Up Bar", "Pool Water Slide", "Panoramic View Pool", "Rooftop Pool", 
+        "Water Park", "Wave Pool", "Lazy River", "Private Pool", "Heated Pool", "Indoor Pool", "Outdoor Pool", 
+        "Children's Pool", "Dogs Stay Free", "Dog Play Area", "Dog Sitting", "Rooms with Fireplace", 
+        "All-Inclusive Packages", "Rooms with Jacuzzi / Hot-Tub", "Health & Safety", "EV charging stations", 
+        "Gym", "Free Wi-Fi", "Business", "Treehouse", "Tennis", "Beach", "Accessible", "Casino", 
+        "Sustainability Journey", "Golf"
+    ]
+    selected_categories = st.multiselect("Select Activities", categories)
 
 """def how_it_works():
     with open("api_test.py", 'r') as file:
@@ -72,19 +82,28 @@ def show_categories():
 def user_input():
     user_option = st.text_input("Enter: ")
     
-    show_categories()
     
     st.markdown("<h4 style='text-align: center;'>Add more options for your trip</h4>", unsafe_allow_html=True)
+
+    st.markdown("#### Select dates")
     date_of_arrival = st.date_input('Date of arrival')
     date_of_deperature = st.date_input('Date of departure')
     
-    st.radio('Weather:', ['sunny','rainy'])
-    st.write('Weather')
+    st.markdown("#### Select Country")
+    countries = [(country.name, country.alpha_2) for country in pycountry.countries]
+    selected_country = st.selectbox("Select a country", countries, format_func=lambda x: x[0])
+    flag_url = get_flag_url(selected_country[1])
+    st.image(flag_url, width=32)
     
-    st.multiselect('Activities', ['Beach','Ski','City Break','Surf'])
-   
-    weather = st.checkbox('Sunny')
-    weather2 = st.checkbox('Rainy')
+    st.markdown("#### Select Country")
+    st.radio('Weather:', ['Sunny','Rainy'])
+    
+    st.markdown("#### Select Activities")
+    show_categories()
+    
+
+    st.button('Search')
+    
     
     
 
@@ -119,6 +138,3 @@ if __name__ == "__main__":
     #data = pd.read_csv("../api/data.csv")
     #fig = plot_weather_data(data, )
     #print(st.session_state.screen)
-    
-  
- 
