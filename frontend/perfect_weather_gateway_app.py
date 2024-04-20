@@ -97,7 +97,7 @@ def user_input():
     st.markdown("#### Select Country")
     countries = [(country.name, country.alpha_2) for country in pycountry.countries]
     selected_country = st.multiselect("Select a country", countries, format_func=lambda x: x[0])
-    print(selected_country)
+    #print(selected_country)
     flag_urls = []
     for country in selected_country:
         print(country[0])
@@ -107,8 +107,10 @@ def user_input():
         unsafe_allow_html=True
     )
     
-    st.markdown("#### Select Country")
-    st.radio('Weather:', ['Sunny','Rainy'])
+    st.markdown("#### Select Weather")
+    weather = st.radio('Weather:', ['Sunny','Rainy','Snow'])
+    min_temperature = st.number_input('Enter minimum temperature')
+    max_temperature = st.number_input('Enter maximum temperature')
     
     st.markdown("#### Select Activities")
     show_categories()
