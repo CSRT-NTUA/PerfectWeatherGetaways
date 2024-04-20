@@ -5,7 +5,7 @@ import seaborn as sns
 # Load your dataset
 @st.cache_resource
 def load_data():
-    df = pd.read_csv('data.csv')
+    df = pd.read_csv('../api/data.csv')
     return df
 
 # Main function

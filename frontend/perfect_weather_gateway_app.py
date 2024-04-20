@@ -5,7 +5,10 @@ import pydeck as pdk
 import pycountry
 import sys
 sys.path.append("../api/")
+sys.path.append("../data_preprocessing/")
 from api import get_answer, travelmyth_api
+from meteo_forecast import get_weather
+from weather_preprocess_plotting import mean_implementation
 
 def plot_weather_data(data, initial_lat, initial_lon):
     fig = st.pydeck_chart(pdk.Deck(
@@ -118,6 +121,13 @@ def user_input():
     if st.button('Search'):
         prompt += "Use the following instructions when answering the prompt above: Reply in Json format Include the places suggestions in an array. Suggest as many as you can, preferably at least 10. When writing, the place name includes only the name, not the country, wider region or continent. If the prompt is appropriate for any of the following categories include the category in the json: Categories: infinity_pool,heated_pool,indoor_pool,rooftop_pool,wave_pool,children_pool,panoramic_view_pool,pool_swim_up_bar,pool_water_slide,pool_lap_lanes,water_park,lazy_river,private_pool,dog_play_area,dog_sitting,dogs_stay_free,outdoor_pool,health_and_safety,treehouse,haunted,overwater_bungalows,three_star,skyscraper,four_star,five_star,yoga,tennis,small,adult_only,gym,accessible,cheap,parking,business,free_wifi,pool,nightlife,romantic,dog_friendly,family,spa,casino,honeymoon,eco_friendly,beach,beachfront,ski,ski_in_ski_out,historic,unusual,vineyard,monastery,castle,golf,luxury,boutique,ev_charging,jacuzzi_hot_tub,fireplace,all_inclusive"
         results = get_answer(prompt)
+        weathers = []
+        for x in results:
+            current_csv = get_weather(x['latitude'], x['longitude'])
+            current_csv = mean_implementation(current_csv)
+            st.write(current_csv)
+            # youre ready to do the classification
+        st.write(weathers)
         st.write(results)
     
 if __name__ == "__main__":
