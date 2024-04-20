@@ -58,9 +58,19 @@ def show_team():
     st.code(code, language='python')
 
 def show_categories():
-    text_file = open('categories.txt', 'r')
-    html_string = text_file.read()
-    st.markdown(html_string, unsafe_allow_html=True)
+    categories = [
+        "Pool", "Spa", "Beachfront", "Dog Friendly", "Adult Only", "Honeymoon", "Skyscraper", 
+        "Infinity Pool", "Luxury", "Historic", "Parking", "Boutique-Style", "Family", "Yoga", 
+        "Ski In Ski Out", "Unusual", "Castle", "Cheap", "Overwater Bungalows", "Ski", "Vineyard", 
+        "Monastery", "Small", "Romantic", "Nightlife", "5 Star", "4 Star", "3 Star", "Haunted", 
+        "Pool Lap Lanes", "Pool Swim Up Bar", "Pool Water Slide", "Panoramic View Pool", "Rooftop Pool", 
+        "Water Park", "Wave Pool", "Lazy River", "Private Pool", "Heated Pool", "Indoor Pool", "Outdoor Pool", 
+        "Children's Pool", "Dogs Stay Free", "Dog Play Area", "Dog Sitting", "Rooms with Fireplace", 
+        "All-Inclusive Packages", "Rooms with Jacuzzi / Hot-Tub", "Health & Safety", "EV charging stations", 
+        "Gym", "Free Wi-Fi", "Business", "Treehouse", "Tennis", "Beach", "Accessible", "Casino", 
+        "Sustainability Journey", "Golf"
+    ]
+    selected_categories = st.multiselect("Select Activities", categories)
 
 """def how_it_works():
     with open("api_test.py", 'r') as file:
