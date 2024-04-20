@@ -7,11 +7,15 @@ import sys
 from datetime import datetime, timedelta
 sys.path.append("../api/")
 sys.path.append("../data_preprocessing/")
+from plots import histogram_plot
 from api import get_answer, travelmyth_api
 from meteo_forecast import get_weather
 from weather_preprocess_plotting import mean_implementation
 from map_plot import create_map
+import time
 
+
+st.set_option('deprecation.showPyplotGlobalUse', False)
 def plot_weather_data(data, initial_lat, initial_lon):
     fig = st.pydeck_chart(pdk.Deck(
     map_style=None,
@@ -65,6 +69,14 @@ def show_team():
 
     st.code(code, language='python')
 
+def typewriter(text: str, speed: int):
+    tokens = text.split()
+    container = st.empty()
+    for index in range(len(tokens) + 1):
+        curr_full_text = " ".join(tokens[:index])
+        container.markdown(curr_full_text)
+        time.sleep(1 / speed)
+
 def show_categories():
     hotel_type = ["Adult Only", "Boutique-Style", "Castle, Family, Haunted, Luxury, Monastery", "Skyscraper", "Small", "Spa", "Vineyard", "Treehouse", "Beachfront", "5 Star", "4 Star", "3 Star", "Cheap", "Historic"]
     sports = [
@@ -92,7 +104,6 @@ def show_categories():
     
 
 def assign_score(df, weather, min_temperature, max_temperature, date_of_arrival, date_of_deperature):
-    print(df.columns)
     df.reset_index(level=0, inplace=True)
     date_of_arrival = pd.to_datetime(date_of_arrival)
     date_of_deperature = pd.to_datetime(date_of_deperature)
@@ -147,7 +158,6 @@ def user_input():
     #print(selected_country)
     flag_urls = []
     for country in selected_country:
-        print(country[0])
         flag_urls.append(get_flag_url(country[1]))
     st.write(
         " ".join([f"<img src='{url}' width='40' style='margin-right: 10px;'>" for url in flag_urls]), 
@@ -164,10 +174,18 @@ def user_input():
     
     if st.button('Search'):
         with st.spinner(text='In progress'):
+            preferred_countries = ""
+            for country in selected_country:
+                preferred_countries += country[0]
+                preferred_countries += ", "
+            if len(preferred_countries) > 0:
+                prompt += f"\n Countries that we prefer to go are {preferred_countries}. \n"
             prompt += "Use the following instructions when answering the prompt above: Reply in Json format Include the places suggestions in an array. Suggest as many as you can, preferably at least 10. When writing, the place name includes only the name, not the country, wider region or continent. If the prompt is appropriate for any of the following categories include the category in the json: Categories: infinity_pool,heated_pool,indoor_pool,rooftop_pool,wave_pool,children_pool,panoramic_view_pool,pool_swim_up_bar,pool_water_slide,pool_lap_lanes,water_park,lazy_river,private_pool,dog_play_area,dog_sitting,dogs_stay_free,outdoor_pool,health_and_safety,treehouse,haunted,overwater_bungalows,three_star,skyscraper,four_star,five_star,yoga,tennis,small,adult_only,gym,accessible,cheap,parking,business,free_wifi,pool,nightlife,romantic,dog_friendly,family,spa,casino,honeymoon,eco_friendly,beach,beachfront,ski,ski_in_ski_out,historic,unusual,vineyard,monastery,castle,golf,luxury,boutique,ev_charging,jacuzzi_hot_tub,fireplace,all_inclusive"
             results = get_answer(prompt, categories)
             scores = {}
-            points = []
+            url = {}
+            best_csv = {}
+            points = [] 
             for x in results:
                 points.append((x['latitude'], x['longitude']))
                 current_csv = get_weather(x['latitude'], x['longitude'])
@@ -175,16 +193,24 @@ def user_input():
                 # youre ready to do the classification
                 # user inputs are [weather, min_temp, max_temp, date_of_arrival, date_of_departure, selected_country]
                 scores[x['name']] = assign_score(current_csv, weather, min_temperature, max_temperature, date_of_arrival, date_of_deperature)
+                url[x['name']] = x['url']
+                best_csv[x['name']] = current_csv
             #st.write(weathers)
             #st.write(results)
             scores = dict(sorted(scores.items(), key=lambda item: item[1], reverse=True))
             top_recommendation = next(iter(scores))
-            container = st.container(border=True)
-            for (index, x) in enumerate(scores):
-                container.write(f"{index + 1}'st Recomendation : {x}")
             create_map(points[0][0], points[0][1], points)
-            
+            typewriter(f"Top recommented destination is : {top_recommendation}", 10)
+            for (index, x) in enumerate(scores):
+                st.markdown(
+                    f"""
+                    - {index + 1}'s Recommendation is: {x} | [Link]({url[x]})
+                    """
+                    )
             st.success('Done')
+            
+            st.write("### Temperature predictions")
+            return best_csv[top_recommendation]
         
 if __name__ == "__main__":
     st.sidebar.header("Menu")
@@ -200,13 +226,14 @@ if __name__ == "__main__":
     #if st.sidebar.button('How it works?'):
     #    st.session_state.screen = "how_it_works" 
         
-        
+    best_recommended_csv = None
     if st.session_state.screen == "welcome_screen":
         show_team()
     if st.session_state.screen == "result":
         show_results()
     if st.session_state.screen == "user_input":
-        user_input()
+        best_recommended_csv = user_input()
+        # histogram_plot(best_recommended_csv)
     #if st.session_state.screen == "how_it_works":
     #    how_it_works()
     
