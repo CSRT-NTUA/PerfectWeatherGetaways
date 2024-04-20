@@ -101,9 +101,16 @@ def user_input():
     
     st.markdown("#### Select Country")
     countries = [(country.name, country.alpha_2) for country in pycountry.countries]
-    selected_country = st.selectbox("Select a country", countries, format_func=lambda x: x[0])
-    flag_url = get_flag_url(selected_country[1])
-    st.image(flag_url, width=32)
+    selected_country = st.multiselect("Select a country", countries, format_func=lambda x: x[0])
+    print(selected_country)
+    flag_urls = []
+    for country in selected_country:
+        print(country[0])
+        flag_urls.append(get_flag_url(country[1]))
+    st.write(
+        " ".join([f"<img src='{url}' width='40' style='margin-right: 10px;'>" for url in flag_urls]), 
+        unsafe_allow_html=True
+    )
     
     st.markdown("#### Select Country")
     st.radio('Weather:', ['Sunny','Rainy'])
