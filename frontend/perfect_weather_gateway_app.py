@@ -212,7 +212,7 @@ def user_input():
             for (index, x) in enumerate(scores):
                 st.markdown(
                     f"""
-                    - {index + 1}'s Recommendation is: {x} | [Link]({url[x]})
+                    - {index + 1}'st Recommendation is: {x} | [Link]({url[x]})
                     """
                     )
             st.session_state.recommented_url = url[top_recommendation]

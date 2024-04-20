@@ -31,7 +31,6 @@ def histogram_plot(data):
 
     # Select column
     selected_column = st.selectbox('Select a column', options=list(column_options.keys()), format_func=lambda x: column_options[x])
-
     # Plot histogram
     plt.figure(figsize=(20, 15))
     sns.barplot(data, x="date", y=selected_column, hue=selected_column)
