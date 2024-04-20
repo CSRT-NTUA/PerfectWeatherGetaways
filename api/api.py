@@ -6,7 +6,7 @@ import json
 import os
 
 openai.api_key = "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"
-def get_answer(prompt:str):
+def get_answer(prompt:str, categories = []):
   # response 
   response = openai.ChatCompletion.create(
     model="gpt-3.5-turbo",
@@ -22,16 +22,12 @@ def get_answer(prompt:str):
   # get the results of the api, it's in json format 
   response = response["choices"][0]["message"]["content"]
   json_result = json.loads(response)
-  json_categories = None
   json_places = None
-  if json_result.get('categories'):
-    json_categories = json_result['categories']
   if json_result.get('places'):
     json_places = json_result['places']
-  print(json_places)
   res = []
   for x in json_places:
-    res.append(travelmyth_api(x, []))
+    res.append(travelmyth_api(x, categories))
   return res
 
 def travelmyth_api(destination, categories):
