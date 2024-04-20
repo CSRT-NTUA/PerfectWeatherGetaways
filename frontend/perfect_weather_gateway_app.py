@@ -103,7 +103,6 @@ def user_input():
     #print(selected_country)
     flag_urls = []
     for country in selected_country:
-        print(country[0])
         flag_urls.append(get_flag_url(country[1]))
     st.write(
         " ".join([f"<img src='{url}' width='40' style='margin-right: 10px;'>" for url in flag_urls]), 
@@ -125,8 +124,11 @@ def user_input():
         for x in results:
             current_csv = get_weather(x['latitude'], x['longitude'])
             current_csv = mean_implementation(current_csv)
+            current_csv['lat'] = x['latitude']
+            current_csv['lon'] = x['longitude']
             st.write(current_csv)
             # youre ready to do the classification, user inputs are [weather, min_temp, max_temp, date_of_arrival, date_of_departure, selected_country]
+
         st.write(weathers)
         st.write(results)
     
