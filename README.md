@@ -3,5 +3,6 @@
 
 ### Run with
 ```
-streamlit run frontend/perfect_weather_gateway_app.py
+cd frontend
+streamlit run perfect_weather_gateway_app.py
 ```
