@@ -1,2 +1,2 @@
 ### Perfect Weather Getaways
-![img]("assets/travelmyth.png")
+![img](./assets/travelmyth.png)
