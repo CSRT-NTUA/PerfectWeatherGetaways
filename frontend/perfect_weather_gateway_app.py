@@ -78,8 +78,7 @@ def show_team():
         members.append("Dimitris Minagias")
     """
     st.code(code, language='python')
-    st.image('../assets/logo.png', width=300)
-
+    st.image(['../assets/logo.png', '../assets/team_photo.png'], width=500)
 
 def typewriter(text: str, speed: int):
     tokens = text.split()
@@ -213,11 +212,11 @@ def user_input():
             scores = dict(sorted(scores.items(), key=lambda item: item[1], reverse=True))
             top_recommendation = next(iter(scores))
             create_map(points[0][0], points[0][1], points)
-            typewriter(f"Top recommented destination is : {top_recommendation}", 10)
+            typewriter(f"Top recommended destination is : {top_recommendation}", 10)
             for (index, x) in enumerate(scores):
                 st.markdown(
                     f"""
-                    - {index + 1}'st Recommendation is: {x} | [Link]({url[x]})
+                    - Recommendation {index + 1} is: {x} | [Link]({url[x]})
                     """
                     )
             st.session_state.recommented_url = url[top_recommendation]
