@@ -17,7 +17,7 @@ def density_mapbox_plot(data, lat, lon, column):
 
 # Main function
 def histogram_plot(data):
-    st.title('Histogram Plotter')
+    st.title('Weather Station')
 
     # Define column options with emojis
     column_options = {
@@ -34,7 +34,7 @@ def histogram_plot(data):
     # Plot histogram
     plt.figure(figsize=(20, 15))
     sns.barplot(data, x="date", y=selected_column, hue=selected_column)
-    plt.title(f'Barplot of {selected_column}')
+    plt.title(f'Barplot of {column_options[selected_column]}')
     plt.xlabel(selected_column)
     plt.ylabel(f'{selected_column}')
     st.pyplot(fig=None)

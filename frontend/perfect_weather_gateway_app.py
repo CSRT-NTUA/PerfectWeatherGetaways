@@ -153,7 +153,7 @@ def assign_score(df, weather, min_temperature, max_temperature, date_of_arrival,
     return score
 
 def user_input():
-    st.title("Perfect Weather Gateway")
+    st.title("Perfect Weather Getaway")
     st.image('../assets/images/travelsmyth_logo.png')
 
 
